@@ -8,11 +8,6 @@ body {
     font-size: 16px;
 }
 
-.input {
-    accent-color: red; /* For modern browsers that support accent-color */
-}
-
-/* Fallback for older browsers */
 input[type="radio"] {
     width: 16px;
     height: 16px;
@@ -21,8 +16,15 @@ input[type="radio"] {
     outline: none;
     cursor: pointer;
     position: relative;
+    margin-right: 10px;
 }
 
+/* Style for even-positioned radio buttons */
+.radio-buttons label:nth-child(even)  {
+    color: rgb(255, 0, 0)
+}
+
+/* Style for the checked state */
 input[type="radio"]:checked::before {
     content: "";
     position: absolute;
@@ -31,7 +33,7 @@ input[type="radio"]:checked::before {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: red;
+    background-color: blue; /* Inner circle color */
     transform: translate(-50%, -50%);
 }
 
